@@ -71,3 +71,6 @@
   (http.referer contains "baidu")
 )
 and not cf.client.bot
+
+
+ACTION : MANAGED CHALLANGE
