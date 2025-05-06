@@ -1,1 +1,3 @@
 (ip.geoip.asnum in {15169 8075 13238 139190 19527 55967 61317 46606 14618 20940 54290 37963 6939} and http.request.method eq "GET") or (ip.src in {66.249.64.0/19} and cf.verified_bot_category in {"Search Engine Crawler" "Page Preview" "Search Engine Optimization"}) or (http.request.uri.path contains "auth_redirect" and http.user_agent contains "DiscourseHub" and http.request.method eq "GET" and ip.src in {127.0.0.1})
+
+ACTION : SKIP 
