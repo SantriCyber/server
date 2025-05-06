@@ -1,0 +1,73 @@
+(
+  (http.user_agent contains "scrapy") or 
+  (http.user_agent contains "masscan") or 
+  (http.user_agent contains "Go-http") or 
+  (http.user_agent contains "ZmEu") or 
+  (http.user_agent contains "Wget") or 
+  (http.user_agent contains "nikto") or 
+  (http.user_agent contains "sqlmap") or 
+  (http.user_agent contains "havij") or 
+  (http.user_agent contains "hydra") or 
+  (http.user_agent contains "fuzz") or 
+  (http.user_agent contains "CheckHost") or 
+  (http.user_agent eq "CheckHost (https://check-host.net/)") or 
+  (http.user_agent contains "ping-test") or 
+  (http.user_agent contains "uptime-check") or 
+  (http.user_agent contains "Shodan") or 
+  (http.user_agent contains "fofa") or 
+  (http.user_agent contains "nmap") or 
+  (http.user_agent contains "zgrab") or 
+  (http.user_agent contains "python-requests") or 
+  (http.user_agent contains "Go-http-client") or 
+  (http.user_agent contains "NetSystemsResearch") or 
+  (http.user_agent eq "") or 
+  (http.user_agent contains "undefined") or 
+  (http.user_agent contains "HeadlessChrome") or 
+  (http.user_agent contains "phantomjs") or 
+  (http.request.uri.query contains "php://") or 
+  (http.request.uri.query contains "zlib://") or 
+  (http.request.uri.query contains "base64,") or 
+  (http.request.uri.query contains "input=") or 
+  (http.request.uri.query contains "GLOBALS[") or 
+  (http.request.uri.query contains "_GET[") or 
+  (http.request.uri.query contains "_POST[") or 
+  (http.request.uri.query contains "cmd=") or 
+  (http.request.uri.query contains "exec=") or 
+  (http.request.uri.query contains "shell=") or 
+  (http.request.uri.query contains "sleep(") or 
+  (http.request.uri.query contains "benchmark(") or 
+  (http.request.uri.query contains "<script>") or 
+  (http.request.uri.query contains "%3Cscript%3E") or 
+  (http.request.uri.query contains "javascript:") or 
+  (http.request.uri.query contains "onerror=") or 
+  (http.request.uri.query contains "alert(") or 
+  (http.request.uri.query contains "document.cookie") or 
+  (http.request.uri.query contains "document.location") or 
+  (http.request.uri.query contains "eval(") or 
+  (http.request.uri.query contains "/etc/passwd") or 
+  (http.request.uri.query contains "/proc/self/environ") or 
+  (http.request.uri.query contains "../../") or 
+  (http.request.uri.query contains "php://filter") or 
+  (http.request.uri.query contains "data://text") or 
+  (http.request.uri.query contains "UNION SELECT") or 
+  (http.request.uri.query contains "SELECT FROM") or 
+  (http.request.uri.query contains "INSERT INTO") or 
+  (http.request.uri.query contains "UPDATE SET") or 
+  (http.request.uri.query contains "DELETE FROM") or 
+  (http.request.uri.query contains "DROP TABLE") or 
+  (http.request.uri.query contains "ORDER BY") or 
+  (http.request.uri.query contains "' OR '1'='1") or 
+  (http.request.uri.query contains "' OR 'x'='x") or 
+  (http.request.uri.query contains "--") or 
+  (http.request.uri.query contains "nslookup") or 
+  (http.referer contains "127.0.0.1") or 
+  (http.referer contains "localhost") or 
+  (http.referer contains "check-host.net") or 
+  (http.referer contains "ping-admin.ru") or 
+  (http.referer contains "host-tracker.com") or 
+  (http.referer contains "shodan.io") or 
+  (http.referer contains "fofa.info") or 
+  (http.referer contains "yandex") or 
+  (http.referer contains "baidu")
+)
+and not cf.client.bot
