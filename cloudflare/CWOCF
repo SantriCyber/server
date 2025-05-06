@@ -1,0 +1,12 @@
+(http.request.version eq "HTTP/2" and
+ (
+    http.request.uri.path eq "/" or
+    http.request.uri.path contains "/login" or
+    starts_with(http.request.uri.path, "/session") or
+    starts_with(http.request.uri.path, "/message-bus")
+ )
+ and not (http.user_agent contains "DiscourseHub")
+ and not (ip.geoip.asnum in {15169 8075 13238})
+)
+
+ACTION : MANAGED CHALLANGE
