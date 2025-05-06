@@ -1,0 +1,20 @@
+(http.request.uri.path eq "/") or (http.request.uri.path contains "/login") or (starts_with(http.request.uri.path, "/session/")) or (starts_with(http.request.uri.path, "/message-bus")) or (not cf.bot_management.verified_bot)
+
+
+With the same characteristics…
+IP
+When rate exceeds…
+Requests (required)
+
+Period (required)
+10 seconds
+
+Then take action…
+Choose action
+Block
+
+Blocks matching requests and stops evaluating other rules
+For duration…
+Duration (required)
+10 seconds
+
