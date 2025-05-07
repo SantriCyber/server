@@ -1,0 +1,19 @@
+../../etc
+../
+.php
+<?php
+eval(
+cmd=
+base64_decode
+shell_exec
+id=
+cat /etc/passwd
+wget
+curl
+scan
+fofa
+shodan
+union select
+select * from
+or 1=1
+drop table
