@@ -123,6 +123,9 @@
 /letter_avatar_proxy
 
 # === ADMIN PANEL & UPGRADE ===
+/admin/update
+/admin/upgrade
+/admin/docker
 /admin/upgrade.json
 /admin/docker.json
 /admin/customize
